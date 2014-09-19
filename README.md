@@ -1,23 +1,28 @@
 Logstash + ElasticSearch + Kibana Showcase
 ========
 
-Un exemple d'utilisation de ses 3 solutions de logs complémentaires
+Un exemple d'utilisation dela combinaison de ces trois projets complémentaires.
 
 1- Logstash
-Logstash est un outil de gestion d'événements et de logs qui peut être utilisé pour collecter, parser et stocker les logs afin de les utiliser plus tard (recherche, métriques, etc).  Il est libre et totalement open-source.
+Logstash est un outil de gestion d'événements et de logs qui peut être utilisé pour collecter, parser et transformer les logs afin de les exploiter plus tard (recherche, métriques, etc).
+Il est libre et totalement open-source.
 
 a) Téléchargement
-La dernière version de Logstash est téléchargeable depuis http://logstash.net/. La version utilisée pour ce showcase est la 1.4.2 et est disponible dans le projet sous github.
+La dernière version de Logstash est téléchargeable depuis http://logstash.net/. La version utilisée pour ce showcase est la 1.4.2. Elle est incluse dans le showcase.
 
 b) Pré-requis
-Afin de pouvoir utiliser Logstash, il faut qu'il y ait Java installé sur la machine. Aucune version n'est précisée mais la documentation recommande d'utiliser une version récente pour tirer le meilleur parti de Logstash. Nous utiliserons pour nos tests Java  1.7
+Afin de pouvoir utiliser Logstash, il installer au préalable le JDK sur la machine.
+
+La documentation recommande d'utiliser une version récente pour tirer le meilleur parti de Logstash. Nous utilisons pour nos tests Java 1.7.
 
 c) Lancement et configuration
+
 Logstash utilise un agent pour collecter, parser et stocker les logs qui lui sont transmis. Ainsi, pour faire tourner Logstash il faut lancer l'agent en lui fournissant certains paramètres de configuration. La commande est de la forme %LOGSTASH_HOME%/bin/logstash agent -options et se lance dans un terminal.
 
 Les options généralement utilisées sont:
-- e : pour dire à Logstash que la configuration à utiliser pour son traitement lui sera fournie directement dans la ligne de commande  (ex: bin/logstash -e 'input { stdin { } } output { stdout { codec => rubydebug } }')
-- f : pour dire à Logstash d'utiliser la configuration dans le fichier en paramètre pour son traitement (ex: bin/logstash -f logstash.conf)
+
+- e : indique que la configuration de Logstash est directement passée dans la ligne de commande  (ex: bin/logstash -e 'input { stdin { } } output { stdout { codec => rubydebug } }')
+- f : indique que la configuration de Logstash est définir dans le fichier passé en paramètre (ex: bin/logstash -f logstash.conf)
 
 Les autres options sont consultables à l'adresse suivante: http://logstash.net/docs/1.4.2/flags.
 
