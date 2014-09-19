@@ -1,0 +1,1331 @@
+[2014-09-16 15:45:55,216][INFO ][node                     ] [Lurking Unknown] version[1.3.2], pid[7880], build[dee175d/2014-08-13T14:29:30Z]
+[2014-09-16 15:45:55,216][INFO ][node                     ] [Lurking Unknown] initializing ...
+[2014-09-16 15:45:55,220][INFO ][plugins                  ] [Lurking Unknown] loaded [], sites []
+[2014-09-16 15:45:57,058][INFO ][node                     ] [Lurking Unknown] initialized
+[2014-09-16 15:45:57,059][INFO ][node                     ] [Lurking Unknown] starting ...
+[2014-09-16 15:45:57,168][INFO ][transport                ] [Lurking Unknown] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.220.43.70:9300]}
+[2014-09-16 15:45:57,267][INFO ][discovery                ] [Lurking Unknown] elasticsearch/NybnZL51RJaYzycc6uD7-A
+[2014-09-16 15:46:00,283][INFO ][cluster.service          ] [Lurking Unknown] new_master [Lurking Unknown][NybnZL51RJaYzycc6uD7-A][SQLI30151][inet[/10.220.43.70:9300]], reason: zen-disco-join (elected_as_master)
+[2014-09-16 15:46:00,345][INFO ][gateway                  ] [Lurking Unknown] recovered [0] indices into cluster_state
+[2014-09-16 15:46:00,368][INFO ][http                     ] [Lurking Unknown] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.220.43.70:9200]}
+[2014-09-16 15:46:00,369][INFO ][node                     ] [Lurking Unknown] started
+[2014-09-16 15:47:32,976][WARN ][transport.netty          ] [Lurking Unknown] exception caught on transport layer [[id: 0x16e5e885, /0:0:0:0:0:0:0:1:53170 => /0:0:0:0:0:0:0:1:9300]], closing connection
+java.io.StreamCorruptedException: invalid internal transport message format
+	at org.elasticsearch.transport.netty.SizeHeaderFrameDecoder.decode(SizeHeaderFrameDecoder.java:46)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:425)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-09-16 15:51:01,842][WARN ][transport.netty          ] [Lurking Unknown] exception caught on transport layer [[id: 0x16e5e885, /0:0:0:0:0:0:0:1:53170 :> /0:0:0:0:0:0:0:1:9300]], closing connection
+java.io.StreamCorruptedException: invalid internal transport message format
+	at org.elasticsearch.transport.netty.SizeHeaderFrameDecoder.decode(SizeHeaderFrameDecoder.java:46)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:425)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.cleanup(FrameDecoder.java:482)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:102)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireChannelDisconnected(Channels.java:396)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:360)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:81)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:36)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:574)
+	at org.elasticsearch.common.netty.channel.Channels.close(Channels.java:812)
+	at org.elasticsearch.common.netty.channel.AbstractChannel.close(AbstractChannel.java:197)
+	at org.elasticsearch.transport.netty.NettyTransport.exceptionCaught(NettyTransport.java:539)
+	at org.elasticsearch.transport.netty.MessageChannelHandler.exceptionCaught(MessageChannelHandler.java:234)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.exceptionCaught(FrameDecoder.java:377)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaught(Channels.java:525)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:48)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:566)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-09-16 15:51:04,129][INFO ][node                     ] [Lurking Unknown] stopping ...
+[2014-09-16 15:51:04,192][INFO ][node                     ] [Lurking Unknown] stopped
+[2014-09-16 15:51:04,193][INFO ][node                     ] [Lurking Unknown] closing ...
+[2014-09-16 15:51:04,200][INFO ][node                     ] [Lurking Unknown] closed
+[2014-09-16 15:51:58,222][INFO ][node                     ] [Marrina Smallwood] version[1.3.2], pid[1880], build[dee175d/2014-08-13T14:29:30Z]
+[2014-09-16 15:51:58,223][INFO ][node                     ] [Marrina Smallwood] initializing ...
+[2014-09-16 15:51:58,228][INFO ][plugins                  ] [Marrina Smallwood] loaded [], sites [head]
+[2014-09-16 15:52:00,054][INFO ][node                     ] [Marrina Smallwood] initialized
+[2014-09-16 15:52:00,054][INFO ][node                     ] [Marrina Smallwood] starting ...
+[2014-09-16 15:52:00,165][INFO ][transport                ] [Marrina Smallwood] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.220.43.70:9300]}
+[2014-09-16 15:52:00,266][INFO ][discovery                ] [Marrina Smallwood] elasticsearch/Zal85ZSDSQCLX007LS-44Q
+[2014-09-16 15:52:03,281][INFO ][cluster.service          ] [Marrina Smallwood] new_master [Marrina Smallwood][Zal85ZSDSQCLX007LS-44Q][SQLI30151][inet[/10.220.43.70:9300]], reason: zen-disco-join (elected_as_master)
+[2014-09-16 15:52:03,348][INFO ][gateway                  ] [Marrina Smallwood] recovered [0] indices into cluster_state
+[2014-09-16 15:52:03,368][INFO ][http                     ] [Marrina Smallwood] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.220.43.70:9200]}
+[2014-09-16 15:52:03,369][INFO ][node                     ] [Marrina Smallwood] started
+[2014-09-16 16:03:47,565][INFO ][cluster.service          ] [Marrina Smallwood] added {[logstash-SQLI30151-7368-2190][0U6mDl6zSamP9IcjB0z_-g][SQLI30151][inet[/10.220.43.70:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-SQLI30151-7368-2190][0U6mDl6zSamP9IcjB0z_-g][SQLI30151][inet[/10.220.43.70:9301]]{client=true, data=false}])
+[2014-09-16 16:07:04,328][INFO ][cluster.metadata         ] [Marrina Smallwood] [logstash-2014.09.16] creating index, cause [auto(bulk api)], shards [5]/[1], mappings [_default_]
+[2014-09-16 16:07:04,608][INFO ][cluster.metadata         ] [Marrina Smallwood] [logstash-2014.09.16] update_mapping [logs] (dynamic)
+[2014-09-16 16:07:04,793][INFO ][cluster.metadata         ] [Marrina Smallwood] [logstash-2014.09.16] update_mapping [logs] (dynamic)
+[2014-09-16 16:07:05,935][INFO ][cluster.metadata         ] [Marrina Smallwood] [logstash-2014.09.16] update_mapping [logs] (dynamic)
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@12fc616a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b749566] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@12fc616a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b749566] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@12fc616a]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b749566] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@12fc616a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b749566] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b749566]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:05,796][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@12fc616a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[]:search': Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 4.
+Was expecting one of:
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:384)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:06,056][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
+[2014-09-16 17:43:05,953][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
+[2014-09-16 17:43:13,644][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@a7e20b9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[0]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:13,645][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@33d70887]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[0]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:13,645][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@33d70887] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[0]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:13,645][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@33d70887] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[0]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:13,645][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@33d70887] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[0]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:13,645][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@33d70887] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tag[0]:search"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.BoolQueryParser.parse(BoolQueryParser.java:106)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 19 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 21 more
+[2014-09-16 17:43:13,644][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@a7e20b9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[0]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:13,644][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@a7e20b9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[0]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:13,644][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@a7e20b9]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[0]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:13,644][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@a7e20b9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"30m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"tag[0]:search"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410747093923,"to":1410919893923}}}]}}}}}}}},"size":0}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] Failed to parse query [tag[0]:search]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:240)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.FQueryFilterParser.parse(FQueryFilterParser.java:67)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.IndexQueryParserService.parseInnerFilter(IndexQueryParserService.java:282)
+	at org.elasticsearch.search.facet.FacetParseElement.parse(FacetParseElement.java:86)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'tag[0]:search': Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:882)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:223)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "]" "] "" at line 1, column 5.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 20 more
+[2014-09-16 17:43:13,932][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
+[2014-09-16 17:43:13,693][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
+[2014-09-16 18:23:43,456][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@66f28a19] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:23:43,456][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@66f28a19]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:23:43,456][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@66f28a19] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:23:43,456][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@66f28a19] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:23:43,456][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@66f28a19] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:23:43,483][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
+[2014-09-16 18:24:48,340][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][4], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@28f622a2] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:24:48,340][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][0], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@28f622a2] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:24:48,340][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][3], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@28f622a2]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:24:48,340][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][1], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@28f622a2] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:24:48,340][DEBUG][action.search.type       ] [Marrina Smallwood] [logstash-2014.09.16][2], node[Zal85ZSDSQCLX007LS-44Q], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@28f622a2] lastShard [true]
+org.elasticsearch.search.SearchParseException: [logstash-2014.09.16][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"tags:sell AND name:\"iPhone 5S\""}},{"query_string":{"query":"brand:\"Google\""}},{"query_string":{"query":"brand:Apple"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1410142293923,"to":1411524693923}}},{"exists":{"field":null}}]}}}},"fields":[null,"_id"],"size":1000,"sort":[{"@timestamp":{"order":"desc"}}]}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [logstash-2014.09.16] exists must be provided with a [field]
+	at org.elasticsearch.index.query.ExistsFilterParser.parse(ExistsFilterParser.java:79)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.BoolFilterParser.parse(BoolFilterParser.java:92)
+	at org.elasticsearch.index.query.QueryParseContext.executeFilterParser(QueryParseContext.java:290)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerFilter(QueryParseContext.java:271)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:74)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:234)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:342)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:263)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2014-09-16 18:24:48,405][DEBUG][action.search.type       ] [Marrina Smallwood] All shards failed for phase: [query]
